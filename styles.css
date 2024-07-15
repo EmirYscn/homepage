@@ -3,16 +3,22 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-}
+
 a {
   text-decoration: none;
+}
+a img {
+  width: 2em;
 }
 header {
   display: flex;
   justify-content: center;
   padding: 3em;
   background-color: #03396c;
+  background-color: rgba(0, 57, 110, 0.42);
+  box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.42);
 }
 i {
   font-size: 1.5em;
@@ -47,6 +53,25 @@ i {
 }
 body {
   background-color: antiquewhite;
+  background-image: linear-gradient(
+    230deg,
+    hsl(263deg 45% 56%) 0%,
+    hsl(281deg 50% 58%) 18%,
+    hsl(299deg 55% 59%) 30%,
+    hsl(318deg 60% 60%) 39%,
+    hsl(327deg 73% 64%) 47%,
+    hsl(337deg 87% 68%) 54%,
+    hsl(346deg 100% 72%) 60%,
+    hsl(356deg 100% 72%) 67%,
+    hsl(6deg 100% 72%) 73%,
+    hsl(16deg 100% 72%) 79%,
+    hsl(24deg 100% 71%) 86%,
+    hsl(31deg 100% 70%) 92%,
+    hsl(39deg 100% 69%) 100%
+  );
+}
+main {
+  padding: 3em;
 }
 .section-container {
   display: flex;
@@ -57,6 +82,9 @@ body {
   gap: 1.2em;
   max-width: 1350px;
 }
+.section-container > h1 {
+  color: white;
+}
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -65,7 +93,7 @@ body {
 }
 .project {
   background-color: white;
-  border-radius: 4px;
+  border-radius: 6px;
   box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.42);
   -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.42);
@@ -75,6 +103,7 @@ body {
   height: 250px;
   object-fit: cover;
   object-position: top;
+  border-radius: 6px 6px 0 0;
 }
 
 .project-description {
@@ -83,14 +112,43 @@ body {
   flex-direction: column;
   gap: 1em;
 }
+.project-header {
+  display: flex;
+  justify-content: space-between;
+}
+.project-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
 footer {
   display: flex;
   justify-content: space-around;
+
+  gap: 2em;
   padding: 3em;
-  background-color: rgb(0, 157, 255);
+  background-color: #03396c;
+  background-color: rgba(255, 255, 255, 0.09);
+  color: white;
 }
 .contact-me {
   display: flex;
   flex-direction: column;
+  gap: 1em;
+}
+.footer-icons {
+  display: flex;
+  gap: 1em;
+  color: black;
+  font-size: 1.2em;
+}
+.contact-info img {
+  width: 1.4em;
+}
+
+.phone-info,
+.email-info {
+  display: flex;
   gap: 1em;
 }
